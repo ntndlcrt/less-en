@@ -81,7 +81,7 @@ module.exports = {
                 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 40, 48, 55,
             ]
         ),
-        fontSize: generateFontSizes([10, 11, 12, 13, 14, 15, 16, 18, 20, 24, 140]),
+        fontSize: generateFontSizes([10, 11, 12, 13, 14, 15, 16, 18, 20, 24, 120, 140]),
         lineHeight: generateValues([1, 1.2, 1.3, 1.4, 1.5, 1.6, 2]),
         fontWeight: generateValues([
             100, 200, 300, 400, 500, 600, 700, 800, 900,
