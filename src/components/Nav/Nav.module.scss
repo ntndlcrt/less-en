@@ -1,0 +1,19 @@
+.nav {
+    @apply fixed top-0 left-0 z-50 w-full flex pt-8 pb-4 px-8 border-b bg-gray_general border-gray_light grid grid-cols-8 items-start;
+
+    &Logo, &Additionnal {
+        @apply col-span-1;
+    }
+
+    &Links {
+        @apply flex items-center justify-between col-start-3 col-span-4;
+
+        &Domains, &About {
+            @apply flex;
+        }
+
+        &Link {
+            @apply mr-3 text-20 font-500 opacity-60 ease-in-out duration-300 cursor-pointer last:mr-0 hover:opacity-100;
+        }
+    }
+}

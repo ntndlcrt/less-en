@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+
+
+
+@import './abstracts/mixins';
+@import './abstracts/variables';
+@import './abstracts/helpers';
+
+@import './global/grid';
+@import './global/typography';
+
+@import './atoms/breadcrumbs';
+
+
+
+@layer base {
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    @apply text-15 leading-1_2 overflow-x-hidden text-gray_dark bg-gray_general px-8 w-screen;
+    font-family: $arial;
+    scroll-behavior: smooth;
+  }
+}
+
+
+
+@tailwind utilities;

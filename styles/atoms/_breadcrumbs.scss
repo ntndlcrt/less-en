@@ -1,0 +1,11 @@
+.breadcrumbs {
+    @apply mr-10;
+    
+    a {
+        @apply uppercase text-12 font-600 cursor-pointer pb-0_5 border-b border-gray_dark border-dotted;
+    }
+
+    .separator {
+        @apply uppercase text-12 font-600 pb-0_5 px-1;
+    }
+}

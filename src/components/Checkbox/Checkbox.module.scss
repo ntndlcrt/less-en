@@ -1,0 +1,34 @@
+.checkbox {
+    @apply flex flex-col mb-8;
+
+    &Button {
+        @apply border border-gray_dark block p-2_5 mb-3 w-content block;
+
+        &Checked {
+            @apply bg-red border-red relative;
+
+            &::after {
+                background:
+                    url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNy4wNjEiIGhlaWdodD0iMTIuNTkxIiB2aWV3Qm94PSIwIDAgMTcuMDYxIDEyLjU5MSI+CiAgPHBhdGggaWQ9Ikljb25fZmVhdGhlci1jaGVjayIgZGF0YS1uYW1lPSJJY29uIGZlYXRoZXItY2hlY2siIGQ9Ik0yMiw5LDExLDIwLDYsMTUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01LjQ3IC04LjQ3KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMWUyMTFmIiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8L3N2Zz4K')
+                    no-repeat
+                    center/cover;
+                width: 1.6rem;
+                height: 1.1rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                content: "";
+                display: block;
+            }
+        }
+    }
+
+    &Title {
+        @apply text-24 leading-1;
+    }
+
+    &Content {
+        @apply text-18 mt-3 leading-1_2 font-400;
+    }
+}

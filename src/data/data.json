@@ -1,0 +1,63 @@
+{
+    "domains": [
+        {
+            "id": "design",
+            "name": "Design",
+            "fields": [
+                {
+                    "id": "colors",
+                    "name": "Colors",
+                    "steps": [
+                        {
+                            "id": "fade",
+                            "name": "Use faded colors instead of bright ones"
+                        },
+                        {
+                            "id": "dark",
+                            "name": "Use dark interfaces instead of light ones",
+                            "details": "Dark interfaces need less energy to be displayed on a screen, involving electricity savings."
+                        }
+                    ]
+                },
+                {
+                    "id": "fonts",
+                    "name": "Fonts",
+                    "steps": [
+                        {
+                            "id": "system",
+                            "name": "Use native system fonts"
+                        },
+                        {
+                            "id": "weight",
+                            "name": "Use multiple font weights instead of multiple fonts"
+                        }
+                    ]
+                },
+                {
+                    "id": "images",
+                    "name": "Images",
+                    "steps": [
+                        {
+                            "id": "format",
+                            "name": "Choose the right format",
+                            "details": "Instead of .png or .jpeg, you can try .webp or .avif files that are way faster to both load and display for web browsers."
+                        },
+                        {
+                            "id": "weight",
+                            "name": "Use multiple font weights instead of multiple fonts",
+                            "details": "If your font family has a consequent range of font weights, why not use that to dynamise your content instead of using different fonts whhich would represent more assets to include to the project ?"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "development",
+            "name": "Development"
+        },
+        {
+            "id": "hosting",
+            "name": "Hosting"
+        }
+    ]
+}
