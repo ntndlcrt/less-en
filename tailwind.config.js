@@ -64,7 +64,8 @@ module.exports = {
 
             gray_light: '#a2a2a2',
             gray_dark: '#1e211f',
-            gray_general: '#C4C0C7'
+            //gray_general: '#C4C0C7'
+            gray_general: '#DBD6CC'
         },
         borderRadius: {
             round: '50%',
