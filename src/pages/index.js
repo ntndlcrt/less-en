@@ -23,9 +23,12 @@ export default function Home() {
             </section>
             <section>
                 <div className="row">
-                    <div className="col-span-1">
-                        <img className="mix-blend-luminosity" src="/leaf.webp" />
-                    </div>
+                    <img className="mix-blend-luminosity" src="/leaf.webp" />
+                </div>
+            </section>
+            <section>
+                <div className="row">
+                    <p className="text-240 leading-1 font-700">Join the Digital <span className="text-white">Guerilla</span></p>
                 </div>
             </section>
         </>
