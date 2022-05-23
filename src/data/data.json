@@ -53,7 +53,39 @@
         },
         {
             "id": "development",
-            "name": "Development"
+            "name": "Development",
+            "fields": [
+                {
+                    "id": "minification",
+                    "name": "Minification",
+                    "steps": [
+                        {
+                            "id": "stylesheets",
+                            "name": "Minify \".scss/.css\" into \".min.css\"",
+                            "details": "Many tools allow you to compile all of your css/scss code into a condensed single line css file, faster to both load and execute for browsers."
+                        },
+                        {
+                            "id": "javascript",
+                            "name": "Minify Javascript",
+                            "details": "As for stylehseets, scripts files often use many tools for them to be more \"reader friendly\" but that will not impact the way they work, only making them harder to load. Minifying JS will, for instance, remove all useless spaces, line breaks, semicolons, unused variables..."
+                        },
+                        {
+                            "id": "purge",
+                            "name": "Purge both CSS and JS",
+                            "details": "Some extensions such as TailWind JIT mode, for instance, will crawl all of your pages and only take needed CSS and JS to clean the final file from unused, yet to be loeaded, ressources. It may also be used to make a page only load its needed assets and make them faster and lighter to load and display.",
+                            "tips": [
+                                "Use <a href='https://purgecss.com/' target='blank'>PurgeCSS</a> for instance",
+                                "Check on <a href='https://tailwindcss.com/blog/just-in-time-the-next-generation-of-tailwind-css' target='blank'>TailWind JIT mode</a> to see an example of purge"
+                            ]
+                        },
+                        {
+                            "id": "images",
+                            "name": "Images",
+                            "details": "Multiple new images format make it possible to minify their size at the minimum without any quality drop, making them faster to load and optimized or even use a file extension faster for the web (.webp, .avif...). And even if you must stick with common formats, there are still ways to minify thoose."
+                        }
+                    ]
+                }
+            ]
         },
         {
             "id": "hosting",

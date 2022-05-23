@@ -25,7 +25,7 @@ export default function Domain({id, name, fields}) {
                         {
                             fields.map((field, index) => {
                                 return (
-                                    <Link href={`/design/${field.id}`}>
+                                    <Link href={`/${id}/${field.id}`}>
                                         <div className="w-full py-8 border-t border-gray_dark border-dotted cursor-pointer" key={`${id}-field-${field.id}`}>
                                             <div className="grid grid-cols-10 items-center">
                                                 <div className="col-span-4 items-center flex">
