@@ -3,6 +3,7 @@
         {
             "id": "design",
             "name": "Design",
+            "sigil": "typography",
             "fields": [
                 {
                     "id": "colors",
@@ -15,7 +16,7 @@
                         {
                             "id": "dark",
                             "name": "Use dark interfaces instead of light ones",
-                            "details": "Dark interfaces need less energy to be displayed on a screen, involving electricity savings."
+                            "details": "Dark interfaces need less energy to be displayed on a screen, involving electricity savings"
                         }
                     ]
                 },
@@ -40,7 +41,7 @@
                         {
                             "id": "format",
                             "name": "Choose the right format",
-                            "details": "Instead of .png or .jpeg, you can try .webp or .avif files that are way faster to both load and display for web browsers."
+                            "details": "Instead of .png or .jpeg, you can try .webp or .avif files that are way faster to both load and display for web browsers"
                         },
                         {
                             "id": "weight",
@@ -54,6 +55,7 @@
         {
             "id": "development",
             "name": "Development",
+            "sigil": "tags",
             "fields": [
                 {
                     "id": "minification",
@@ -62,7 +64,7 @@
                         {
                             "id": "stylesheets",
                             "name": "Minify \".scss/.css\" into \".min.css\"",
-                            "details": "Many tools allow you to compile all of your css/scss code into a condensed single line css file, faster to both load and execute for browsers."
+                            "details": "Many tools allow you to compile all of your css/scss code into a condensed single line css file, faster to both load and execute for browsers"
                         },
                         {
                             "id": "javascript",
@@ -72,7 +74,7 @@
                         {
                             "id": "purge",
                             "name": "Purge both CSS and JS",
-                            "details": "Some extensions such as TailWind JIT mode, for instance, will crawl all of your pages and only take needed CSS and JS to clean the final file from unused, yet to be loeaded, ressources. It may also be used to make a page only load its needed assets and make them faster and lighter to load and display.",
+                            "details": "Some extensions such as TailWind JIT mode, for instance, will crawl all of your pages and only take needed CSS and JS to clean the final file from unused, yet to be loeaded, ressources. It may also be used to make a page only load its needed assets and make them faster and lighter to load and display",
                             "tips": [
                                 "Use <a href='https://purgecss.com/' target='blank'>PurgeCSS</a> for instance",
                                 "Check on <a href='https://tailwindcss.com/blog/just-in-time-the-next-generation-of-tailwind-css' target='blank'>TailWind JIT mode</a> to see an example of purge"
@@ -81,7 +83,75 @@
                         {
                             "id": "images",
                             "name": "Images",
-                            "details": "Multiple new images format make it possible to minify their size at the minimum without any quality drop, making them faster to load and optimized or even use a file extension faster for the web (.webp, .avif...). And even if you must stick with common formats, there are still ways to minify thoose."
+                            "details": "Multiple new images format make it possible to minify their size at the minimum without any quality drop, making them faster to load and optimized (.webp, .avif...). And even if you must stick with common formats, there are still ways to minify thoose"
+                        }
+                    ]
+                },
+                {
+                    "id": "static",
+                    "name": "Static content",
+                    "steps": [
+                        {
+                            "id": "content",
+                            "name": "Have as many static content/pages as possible",
+                            "details": "Just having to display a text written in the code rather than fetching an API or querying a field will always be less needfull of ressources"
+                        },
+                        {
+                            "id": "images",
+                            "name": "Import images from theme",
+                            "details": "Using web links or getting images from a CMS, when the image is not likely to change often, is an uneeded waste of memory"
+                        },
+                        {
+                            "id": "assets",
+                            "name": "Import assets from node_modules",
+                            "details": "Many packages allow you to simply use CDN to load them, however using local packages is way more optimized"
+                        },
+                        {
+                            "id": "local",
+                            "name": "Use local variables",
+                            "details": "Instead of storing your variables on your server, store them in your code with '.env' files allowing you to access the same features as you would with a web server, using less memory"
+                        }
+                    ]
+                },
+                {
+                    "id": "css",
+                    "name": "CSS",
+                    "steps": [
+                        {
+                            "id": "oocss",
+                            "name": "Use Object Oriented CSS (OOCSS)",
+                            "details": "CSS helps you create classes to which you assign properties and then make every element using this class inherit the properties. OOCSS is a bit different. To each property you create a class and assign many classes to elements to combine them. By doing so, you limitate your CSS code and make every page load the same class multiple times but read the property only once"
+                        },
+                        {
+                            "id": "critical",
+                            "name": "Set-up critical CSS",
+                            "details": "Critical CSS is a tool that will make CSS properties loaded only when needed (in other words, when the elements are visible in the viewport). Used to improove performances it also helps a lot when it comes to data loading and, therefore, energy loss"
+                        }
+                    ]
+                },
+                {
+                    "id": "php",
+                    "name": "PHP",
+                    "steps": [
+                        {
+                            "id": "variables",
+                            "name": "Avoid useless variables assignations",
+                            "details": "Sometimes, in order to facilitate code reading, we may assign clear variable names to otherwise difficult to understand names/functions. However, by doing so, we ask memory to assign and store a variable which, in some cases, doesn't add much besides readability. Avoiding this will lighten the memory required in the site"
+                        },
+                        {
+                            "id": "functions",
+                            "name": "Use functions when needed",
+                            "details": "Creating functions sometimes help you make better coding and fasten up algorithms. But, in some cases, using a third party function isn't as usefull as thought. For instance, a function that returns a file src using its id by calling a native Wordpress method won't be usefull as you can use the Wordpress method directly"
+                        },
+                        {
+                            "id": "abstract",
+                            "name": "Create Abstract Classes",
+                            "details": "Everytime you start repeating same code too many times, think about writing it only once and call an instance of it when needed. PHP classes allow you to use Abstract classes, for instance. Each class that extends the Abstract Class will then inherit its methods and allow you to write them only once and cleaning the code to make it lighter"
+                        },
+                        {
+                            "id": "unset",
+                            "name": "Unset variables if not needed elsewhere",
+                            "details": "Creating variables will help you throw a function only once, for instance, and use its result many times inside your file. you may consider unsetting this variable after it's been used since, sometimes, it won't be needed anywhere else. By doing so, you will free many memory resources"
                         }
                     ]
                 }
@@ -89,7 +159,8 @@
         },
         {
             "id": "hosting",
-            "name": "Hosting"
+            "name": "Hosting",
+            "sigil": "www"
         }
     ]
 }
