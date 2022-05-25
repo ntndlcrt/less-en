@@ -1,10 +1,10 @@
 // Define section properties
 @layer base {
     section {
-        @apply mx-auto mb-15 relative;
+        @apply mx-auto mb-15 relative last:mb-0 last:pb-30;
     
         @screen md {
-            @apply mb-14;
+            @apply mb-14 last:mb-0 last:pb-30;;
             max-width: 192rem;
         }
     }

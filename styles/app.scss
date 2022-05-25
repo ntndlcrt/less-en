@@ -18,12 +18,17 @@
 @layer base {
   html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
   
   body {
-    @apply text-15 leading-1_2 overflow-x-hidden text-gray_dark bg-gray_general px-8 w-screen;
+    @apply text-15 leading-1_2 overflow-x-hidden text-gray_dark bg-gray_general w-screen;
     font-family: $arial;
     scroll-behavior: smooth;
+
+    main {
+      @apply px-8 relative z-30 bg-gray_general;
+    }
   }
 }
 

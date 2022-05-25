@@ -8,7 +8,6 @@ import Data from '../data/data.json'
 import DomainCard from '../components/DomainCard'
 
 export default function Home({ cards }) {
-    console.log(cards)
     return (
         <>
             <Head>
@@ -16,10 +15,10 @@ export default function Home({ cards }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>Lessen | How to make green web</title>
             </Head>
-            <section className="mt-15">
+            <section className="pt-15">
                 <div className="row grid-cols-5 items-start">
                     <div className="col-span-3 pt-16">
-                        <h3 className="text-140 leading-1 mb-10"><span className="text-white pl-8">Eco-friendly</span><br/>websites<br/>made simple</h3>
+                        <h3 className="text-120 leading-1 mb-10"><span className="text-white pl-8">Eco-friendly</span><br/>websites<br/>made simple</h3>
                     </div>
                     <div className="col-span-2 grid grid-cols-7">
                         <div className="col-span-4 col-start-3">
@@ -28,7 +27,7 @@ export default function Home({ cards }) {
                                     <filter id="Soustraction_4" x="56.214" y="42.734" width="129.579" height="89.699" filterUnits="userSpaceOnUse">
                                     <feOffset dy="3" input="SourceAlpha"/>
                                     <feGaussianBlur stdDeviation="2" result="blur"/>
-                                    <feFlood flood-opacity="0.122"/>
+                                    <feFlood floodOpacity="0.122"/>
                                     <feComposite operator="in" in2="blur"/>
                                     <feComposite in="SourceGraphic"/>
                                     </filter>
@@ -51,9 +50,17 @@ export default function Home({ cards }) {
                         </div>
                     </div>
                     <div className="col-span-5 flex items-end justify-between">
-                        <p className="text-20 font-300 w-40">A collection of the best sustainable<br/>web good practices.</p>
+                        <p className="text-20 font-300 w-40 pl-8">A collection of the best sustainable<br/>web good practices.</p>
                         <Link href="/#domains">
-                            <span>Scroll to explore</span>
+                            <div className="flex items-center cursor-pointer">
+                                <span className="mr-1_5">Scroll to explore</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13.061" height="17.061" viewBox="0 0 13.061 17.061">
+                                    <g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(22.03 -7.5) rotate(90)">
+                                        <path id="Tracé_200" data-name="Tracé 200" d="M7.5,18h16" transform="translate(0 -2.5)" fill="none" stroke="#1e211f" strokeLinejoin="round" strokeWidth="1.5"/>
+                                        <path id="Tracé_201" data-name="Tracé 201" d="M18,7.5l6,6-6,6" transform="translate(-0.5 2)" fill="none" stroke="#1e211f" strokeWidth="1.5"/>
+                                    </g>
+                                </svg>
+                            </div>
                         </Link>
                     </div>
                 </div>
@@ -69,7 +76,7 @@ export default function Home({ cards }) {
                     {cards &&
                         cards.map((card) => {
                             return (
-                                <DomainCard {...card} />
+                                <DomainCard key={`domain-card-${card.id}`} {...card} />
                             )
                         })
                     }

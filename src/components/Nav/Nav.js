@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 export default function Nav() {
     const [links, setLinks] = useState()
 
-    useEffect(async () => {
+    useEffect(() => {
         let linksArray = []
         Data.domains.forEach(domain => {
             linksArray.push({
