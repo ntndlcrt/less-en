@@ -1,9 +1,8 @@
-import styles from './Footer.module.scss'
 import Link from 'next/link'
 
 export default function Footer() {
     return (
-        <footer className="py-20 px-11 bg-gray_dark w-full text-gray_general relative z-50">
+        <footer className="py-20 px-11 bg-gray_dark w-full text-gray_general">
             <span className=" block text-140 pb-10 mb-10 border-b border-gray_general">Less energy,<br/>a better internet.</span>
             <div className="grid grid-cols-2 gap-3">
                 <div className="flex flex-col">

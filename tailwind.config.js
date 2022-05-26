@@ -74,9 +74,6 @@ module.exports = {
             1: '0.8rem',
             full: '1000rem'
         },
-        fontFamily: {
-            // 'font-name': ['Font Name', 'sans-serif'],
-        },
         spacing: generateSpacing(
             8,
             [

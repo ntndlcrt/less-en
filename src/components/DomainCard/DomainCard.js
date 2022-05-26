@@ -11,7 +11,7 @@ export default function DomainCard({ id, number, name, sigil, countFields, count
                 setSymbol('</>')
                 break
             case 'typography' :
-                setSymbol('<span className="text-24"><span style="font-family: serif !important">A</span>a</span>')
+                setSymbol('<span className="text-24"><span className="font-serif">A</span>a</span>')
                 break
             case 'www' :
                 setSymbol('<span className="text-24">www.</span>')

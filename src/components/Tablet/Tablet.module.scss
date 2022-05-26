@@ -1,0 +1,34 @@
+.tablet {
+    height: 22rem;
+    content: "";
+    position: relative;
+
+    &Circles {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &Circle {
+            position: relative;
+            height: 22rem;
+            width: 22rem;
+            @apply rounded-round border-gray_general;
+            overflow: hidden;
+            content: "";
+            border: 1px solid;
+
+            &Symbol {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 7rem;
+                letter-spacing: -0.2rem;
+            }
+        }
+    }
+}

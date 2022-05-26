@@ -6,6 +6,7 @@ import parse from 'html-react-parser'
 import Data from '../data/data.json'
 
 import DomainCard from '../components/DomainCard'
+import Tablet from '../components/Tablet'
 
 export default function Home({ cards }) {
     return (
@@ -80,6 +81,35 @@ export default function Home({ cards }) {
                             )
                         })
                     }
+                </div>
+            </section>
+            <section>
+                <Tablet />
+            </section>
+            <section>
+                <div className="row">
+                    <div className="flex items-center justify-center mb-4">
+                        <div className="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="127" height="27" viewBox="0 0 127 27">
+                                <g id="Logo" transform="translate(-85 -79)">
+                                    <text id="_" data-name="®" transform="translate(204 91)" fill="#1e211f" fontSize="10" fontFamily="Arial-BoldMT, Arial" fontWeight="700" letterSpacing="-0.02em"><tspan x="0" y="0">®</tspan></text>
+                                    <g id="Groupe_8" data-name="Groupe 8">
+                                    <text id="en" transform="translate(169 101)" fill="#1e211f" fontSize="24" fontFamily="Arial-BoldMT, Arial" fontWeight="700" letterSpacing="-0.02em"><tspan x="0" y="0">EN</tspan></text>
+                                    <g id="Groupe_1" data-name="Groupe 1">
+                                        <path id="Tracé_1" data-name="Tracé 1" d="M0,0H19" transform="translate(148 92.5)" fill="#1e211f"/>
+                                        <path id="Tracé_1_-_Contour" data-name="Tracé 1 - Contour" d="M19,.8H0V-.8H19Z" transform="translate(148 92.5)" fill="#1e211f"/>
+                                    </g>
+                                    <text id="Less" transform="translate(85 101)" fill="#1e211f" fontSize="24" fontFamily="Arial-BoldMT, Arial" fontWeight="700" letterSpacing="-0.02em"><tspan x="0" y="0">LESS</tspan></text>
+                                    </g>
+                                </g>
+                            </svg>
+                            <span className="ml-0_5">gallery</span>
+                        </div>
+                        <div className="ml-4">
+                            <span className="px-2 py-1 border border-gray rounded-full">Coming soon</span>
+                        </div>
+                    </div>
+                    <p className="text-140 leading-1 text-center tracking-tight">A showcase of the best sustainable websites</p>
                 </div>
             </section>
         </>
