@@ -43,9 +43,9 @@ export default function Checkbox({checkCompleted, domain, field, id, name, detai
                 <p className={styles.checkboxContent}>{details}</p>
             }
             {tips &&
-                tips.map((tip) => {
+                tips.map((tip, index) => {
                     return (
-                        <div className={styles.checkboxTip}>
+                        <div key={`tip-${index}`} className={styles.checkboxTip}>
                             <div className={`label ${styles.checkboxTipLabel}`}>TIP</div>
                             <p className="text-20">{parse(tip)}</p>
                         </div>
