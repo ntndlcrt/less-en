@@ -25,10 +25,22 @@
     }
 
     &Title {
-        @apply text-24 leading-1;
+        @apply text-24 leading-1 font-700;
     }
 
     &Content {
         @apply text-18 mt-2 leading-1_5 font-400 opacity-80;
+    }
+
+    &Tip {
+        @apply mt-4 first:mt-8 p-6 bg-gray_dark text-gray_general flex items-center;
+
+        &Label {
+            @apply text-gray_dark bg-gray_general text-24 font-700 w-content py-0_5 px-1_5 leading-1 mr-3;
+        }
+
+        a {
+            @apply underline cursor-pointer hover:no-underline;
+        }
     }
 }

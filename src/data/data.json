@@ -114,6 +114,35 @@
                     ]
                 },
                 {
+                    "id": "modular",
+                    "name": "Modular design",
+                    "steps": [
+                        {
+                            "id": "components",
+                            "name": "Divide website into components",
+                            "details": "Whenever you see parts of your design that repeats itself (like some sections showing up on many pages, UI component like cards used in multiple contexts or even similar parts with just few differences) try making that a single template file which you call when needed. This will decrease your code length, making it easier to load."
+                        },
+                        {
+                            "id": "js",
+                            "name": "Custom scripts",
+                            "details": "Sometimes, a script is made just for one component ; for instance, a script that handles an interactive map is only needed when there is a map. Instead of making a script called on every single page, try to load it inside your component, making it called only when needed (or find a solution for it to be loeaded only if a map component is seen in the DOM)"
+                        },
+                        {
+                            "id": "css",
+                            "name": "Custom styles",
+                            "details": "With comdular design comes modular styling. By doing so, you make CSS being called only when the component it's related to is in the page, making less ressources to load on many pages.",
+                            "tips": [
+                                "See this <a href='https://github.com/css-modules/css-modules' target='blank'>github page</a> for examples of modular CSS"
+                            ]
+                        },
+                        {
+                            "id": "import",
+                            "name": "Import only when needed",
+                            "details": "When checking the Chrome console, you often see many things being loaded although they are not needed in anyway in the given context. By making sure any asset is loaded if and only if needed, you reduce the amount of energy needed to display your page."
+                        }
+                    ]
+                },
+                {
                     "id": "css",
                     "name": "CSS",
                     "steps": [

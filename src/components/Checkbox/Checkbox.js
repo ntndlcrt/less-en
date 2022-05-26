@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import parse from 'html-react-parser'
 
 import styles from './Checkbox.module.scss'
 
@@ -42,9 +43,14 @@ export default function Checkbox({checkCompleted, domain, field, id, name, detai
                 <p className={styles.checkboxContent}>{details}</p>
             }
             {tips &&
-                <div className={styles.checkboxTips}>
-                    <p>{tips}</p>
-                </div>
+                tips.map((tip) => {
+                    return (
+                        <div className={styles.checkboxTip}>
+                            <div className={`label ${styles.checkboxTipLabel}`}>TIP</div>
+                            <p className="text-20">{parse(tip)}</p>
+                        </div>
+                    )
+                })
             }
         </div>
     )
