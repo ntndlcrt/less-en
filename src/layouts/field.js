@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Checkbox from '../components/Checkbox'
 import Sidenav from '../components/Sidenav'
-import Head from 'next/head'
 import { useState, useEffect } from 'react'
 
 export default function Field({ fields, domain, id, name, total, steps }) {

@@ -159,6 +159,26 @@
                     ]
                 },
                 {
+                    "id": "js",
+                    "name": "JavaScript",
+                    "steps": [
+                        {
+                            "id": "functions",
+                            "name": "Use anonymous functions",
+                            "details": "When needed only once, a function can be declared directly when needed - \"() => {}\" for instance - and save memory space by not being stored as a callable function"
+                        },
+                        {
+                            "id": "cache",
+                            "name": "Store in cache",
+                            "details": "When an object is often used in your code, try making it a cache accessible variable in order to repeat less code. For instance, localStorage allow you to store data on the client side, making the server side way lighter"
+                        },
+                        {
+                            "id": "dom",
+                            "name": "Avoid DOM transformations as much as possible"
+                        }
+                    ]
+                },
+                {
                     "id": "php",
                     "name": "PHP",
                     "steps": [
@@ -189,7 +209,35 @@
         {
             "id": "hosting",
             "name": "Hosting",
-            "sigil": "www"
+            "sigil": "www",
+            "fields": [
+                {
+                    "id": "green",
+                    "name": "Green host",
+                    "steps": [
+                        {
+                            "id": "policy",
+                            "name": "Search for public sustainability/environmental policy",
+                            "details": "One of the first steps is to check if your host has any sort of caring for the environment. Ecosia, a green search engine, reaches users by stating how they plant trees in deforested areas depending on the number of searches you make on it. If your host has no intention to communicate about something like that, it's not a good sign."
+                        },
+                        {
+                            "id": "energy",
+                            "name": "Does it use green energy and/or carbon offsets ?",
+                            "details": "There is a difference between using renewable energy and carbon offsets to supply facilities. You may try to find out how they provide energy on their website and compare its sustainability to other hosts."
+                        },
+                        {
+                            "id": "pue",
+                            "name": "Verify the PUE rating of the data centers",
+                            "details": "Power Usage Effectivness (PUE) is a standard energy efficiency, comparing energy used for computers and the one used for lights, coolers... you want to go for a host who is transparent about PUE and, in the best scenarios, has a very low rating (perfect being 1.0). It is not a perfect rating and should not be considered the most important thing to check for but is not to be ignored even so."
+                        },
+                        {
+                            "id": "tools",
+                            "name": "Seek software efficiency",
+                            "details": "A host using the latest PHP versions will need less server resources to achieve its goals, for instance. These technical details can and do make a difference."
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

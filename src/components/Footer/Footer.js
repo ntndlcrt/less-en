@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Footer() {
     return (
-        <footer className="py-20 px-11 bg-gray_dark w-full text-gray_general">
+        <footer className="py-20 px-11 bg-gray_dark w-full text-gray_general relative z-40">
             <span className=" block text-140 pb-10 mb-10 border-b border-gray_general">Less energy,<br/>a better internet.</span>
             <div className="grid grid-cols-2 gap-3">
                 <div className="flex flex-col">
@@ -37,12 +37,6 @@ export default function Footer() {
                         </Link>
                         <Link href="/hosting">
                             <span className="cursor-pointer block mb-4">Hosting</span>
-                        </Link>
-                        <Link href="/about">
-                            <span className="mb-1 cursor-pointer">About</span>
-                        </Link>
-                        <Link href="/credits">
-                            <span className="mb-1 cursor-pointer">Credits</span>
                         </Link>
                     </div>
                 </div>

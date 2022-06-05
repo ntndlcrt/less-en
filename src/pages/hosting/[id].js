@@ -2,20 +2,20 @@ import Data from '../../data/data.json'
 import Field from '../../layouts/field'
 
 
-export default function FieldDesign(props) {
+export default function FieldHosting(props) {
     return (
         <Field {...props} />
     )
 }
 
-FieldDesign.getLayout = function getLayout(pageProps) {
+FieldHosting.getLayout = function getLayout(pageProps) {
     return (
         <Field {...pageProps} />
     )
 }
 
 export async function getStaticPaths() {
-    const paths = Data.domains.find(domain => domain.id === 'design').fields.map((field) => ({
+    const paths = Data.domains.find(domain => domain.id === 'hosting').fields.map((field) => ({
         params: { id: field.id }
     }))
 
@@ -23,15 +23,15 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const field = Data.domains.find(domain => domain.id === 'design').fields.find(field => field.id === params.id)
+    const field = Data.domains.find(domain => domain.id === 'hosting').fields.find(field => field.id === params.id)
 
     let fields = [];
     Data.domains.forEach(domain => {
         domain.fields?.forEach(field => {
-            domain.id === 'design' ?
+            domain.id === 'hosting' ?
                 fields.push({
                     id: field.id,
-                    url: `/design/${field.id}`,
+                    url: `/hosting/${field.id}`,
                     name: field.name
                 })
             : ''
@@ -42,8 +42,8 @@ export async function getStaticProps({ params }) {
         props: {
             fields,
             domain: {
-                id: 'design',
-                name: 'Design'
+                id: 'hosting',
+                name: 'Hosting'
             },
             id: field.id,
             name: field.name,

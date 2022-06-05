@@ -1,6 +1,6 @@
 .sidenav {
     left: 6.4rem;
-    @apply fixed flex flex-col mt-24 top-0 z-40;
+    @apply fixed flex flex-col mt-24 top-0 z-30;
 
     &Completed {
         @apply text-white text-140 mb-9 font-300;
