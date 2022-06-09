@@ -11,12 +11,11 @@
                     "steps": [
                         {
                             "id": "fade",
-                            "name": "Use faded colors instead of bright ones"
-                        },
-                        {
-                            "id": "dark",
-                            "name": "Use dark interfaces instead of light ones",
-                            "details": "Dark interfaces need less energy to be displayed on a screen, involving electricity savings"
+                            "name": "Use dark or faded colors",
+                            "details": "Dark colors limit the amout of light emitted by the screen. If bright colors are part of your brand identity, you should try to use faded colors instead.",
+                            "tips": [
+                                "Consider adding a dark mode to your website"
+                            ]
                         }
                     ]
                 },
@@ -26,11 +25,26 @@
                     "steps": [
                         {
                             "id": "system",
-                            "name": "Use native system fonts"
+                            "name": "Use system fonts when possible",
+                            "details": "System fonts such as Arial and Times New Roman can be used without loading any files as they are already on the users device."
                         },
                         {
-                            "id": "weight",
-                            "name": "Use multiple font weights instead of multiple fonts"
+                            "id": "variations",
+                            "name": "Use less fonts variations",
+                            "details": "When designing a website, you should limit the number of typefaces you choose and the number of different weights that you use for each typeface.",
+                            "tips": [
+                                "Increase the font size instead of the font weight to establish visual contrast."
+                            ]
+                        },
+                        {
+                            "id": "format",
+                            "name": "Choose the right font format",
+                            "details": "Instead of TTF, OFT or SVG, use WOFF or WOFF2 files that are way faster to both load and display for web browsers. Be aware that WOFF2 format is not supported by older browsers."
+                        },
+                        {
+                            "id": "optimize",
+                            "name": "Optimize fonts",
+                            "details": "Subset fonts to only include the characters needed on the website."
                         }
                     ]
                 },
@@ -39,14 +53,37 @@
                     "name": "Images",
                     "steps": [
                         {
-                            "id": "format",
-                            "name": "Choose the right format",
-                            "details": "Instead of .png or .jpeg, you can try .webp or .avif files that are way faster to both load and display for web browsers"
+                            "id": "dice",
+                            "name": "Use images only when needed",
+                            "details": "When designing a website, you should always ask yourself whether an image is required to achieve the effect you desire.",
+                            "tips": [
+                                "Convert images to dice to avoid loading any files (<a href='https://github.com/mazore/dice' target='_blank'>dice</a> / <a href='https://github.com/Chrisdf/Dice-Picture-Converter' target='_blank'>dice-picture-convertor</a> / <a href='https://github.com/pooyanzarif/Convert-Image-to-Dice-Matrix' target='_blank'>convert-image-to-dice-matrix</a>).",
+                                "Replace images with vector (SVG) illustrations when possible."
+                            ]
                         },
                         {
-                            "id": "weight",
-                            "name": "Use multiple font weights instead of multiple fonts",
-                            "details": "If your font family has a consequent range of font weights, why not use that to dynamise your content instead of using different fonts whhich would represent more assets to include to the project ?"
+                            "id": "format",
+                            "name": "Choose the right format",
+                            "details": "Instead of PNG or JPEG, use WEBP or AVIF files that are way faster to both load and display for web browsers. Be aware that newer formats such as WEBP or AVIF are not supported by older browsers.",
+                            "tips": [
+                                "Analyze your website using <a href='https://gtmetrix.com' target='_blank'>GTmetrix</a> to see a list of images that need to be resized in the “Structure” tab’s report.",
+                                "Serve multiple image versions using src, srcset and sizes HTLM attributes and the browser will choose the best one to use."
+                            ]
+                        },
+                        {
+                            "id": "compress",
+                            "name": "Compress images",
+                            "details": "Image editors don’t do the best job of compressing images, we advice you to use online compression tools for the best results.",
+                            "tips": [
+                                "Analyze your website using <a href='https://shortpixel.com/image-compression-test' target='_blank'>ShortPixel’s image compression test</a> to see a list of images that need to be optimized.",
+                                "Compress your images using online compressors such as <a href='https://shortpixel.com/' target='_blank'>ShortPixel</a>.",
+                                "Dither your images using <a href='https://ditherit.com/' target='_blank'>Dither it!</a> for a cool halftone effect and a reduced weight."
+                            ]
+                        },
+                        {
+                            "id": "lazy",
+                            "name": "Use Lazy Load images",
+                            "details": "Lazy Load images only load as the user scroll down the page instead of all at once up front. This technique greatly reduces the use of resources."
                         }
                     ]
                 }
