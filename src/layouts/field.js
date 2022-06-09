@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Head from 'next/head'
 import Checkbox from '../components/Checkbox'
 import Sidenav from '../components/Sidenav'
 import { useState, useEffect } from 'react'
@@ -28,6 +29,11 @@ export default function Field({ fields, domain, id, name, total, steps }) {
 
     return (
         <>
+            <Head>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <title>{domain.name} - {name} | Less-en</title>
+            </Head>
             {fields
                 ?
                     <Sidenav completed={completed} total={total} fields={fields} activeField={id} />
